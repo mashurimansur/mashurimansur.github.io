@@ -1,0 +1,60 @@
+.footer{
+    padding: 10rem 0 5rem 0;
+    background: #333;
+    font-size: 1.4rem;
+    &__logo-box{
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+    &__logo{
+        width: 15rem;
+        height: auto;
+    }
+    &__navigation{
+        border-top: 1px solid $warna-putih-gelap;
+        padding-top: 2rem;
+        display: inline-block;
+        @include responsive(tablet-portait){
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &__list{
+        list-style: none;
+    }
+    &__item{
+        display: inline-block;
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+    }
+    &__link{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $warna-putih-gelap;
+        display: inline-block;
+        transition: .2s all;
+        &:hover{
+            box-shadow: 0 2rem 4rem rgba($warna-hitam, .2);
+            transform: scale(1.2) rotate(5deg);
+            color: $warna-hijau-medium;
+            background: #333;
+        }
+        &:active{
+            transform: scale(1.07) rotate(3deg);
+            box-shadow: 0 1rem 2rem rgba($warna-hitam, .2);
+        }
+    }
+    &__copyright{
+        color: $warna-putih-gelap;
+        border-top: 1px solid $warna-putih-gelap;
+        padding-top: 2rem;
+        float: right;
+        width: 85%;
+        @include responsive(tablet-portait){
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+    }
+}

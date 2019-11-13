@@ -1,0 +1,58 @@
+body { 
+    font-family: "Lato", sans-serif;
+    color: #777;
+    line-height: 1.7;
+}
+
+.header__utama {
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 4rem;
+    &--judul {
+        font-size: 6rem;
+        display: block;
+        font-weight: 600;
+        letter-spacing: 3rem;
+        animation-name: GerakanKeKanan;
+        animation-duration: 2s;
+        @include responsive(phone){
+            font-size: 4rem;
+            letter-spacing: 2rem;
+        }
+    }
+    &--keterangan {
+        font-size: 2rem;
+        display: block;
+        font-weight: 400;
+        letter-spacing: 1.65rem;
+        animation-name: GerakanKeKiri;
+        animation-duration: 2s;
+        @include responsive(phone){
+            font-size: 1.3rem;
+            letter-spacing: 1rem;
+        }
+    }
+
+}
+.header__kedua{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    background: linear-gradient(to right,$warna-hijau-muda, $warna-hijau-tua);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    @include responsive(phone){
+        font-size: 3rem;
+    }
+}
+.header__ketiga{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+.paragraph{
+    font-size: 1.6rem;
+    &:not(:last-child){
+        margin-bottom: 4rem;
+    }
+    
+}

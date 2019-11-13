@@ -1,0 +1,180 @@
+.card {
+    perspective: 150rem;
+    position: relative;
+    height: 53rem;
+    &__sisi {
+        font-size: 2rem;
+        height: 53rem;
+        transition: 1.3s all;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        overflow: hidden;
+        box-shadow: 0 1rem 4rem rgba($warna-hitam, .2);
+        border-radius: 5px;
+        &--depan{
+
+        }
+        &--belakang{
+            transform: rotateY(180deg);
+            &--1{
+                background: linear-gradient(to right bottom, $warna-orange-muda, $warna-orange-tua);
+            }
+            &--2{
+                background: linear-gradient(to right bottom, $warna-hijau-muda, $warna-hijau-tua);
+            }
+            &--3{
+                background: linear-gradient(to right bottom, $warna-biru-muda, $warna-biru-tua);
+            }
+        }
+    }
+    &:hover &__sisi{
+         &--depan{
+             transform: rotateY(-180deg);
+         }
+        &--belakang{
+         transform: rotateY(0);
+        }
+    }
+
+    // PENGATURAN UNTUK BAGIAN DEPAN
+    &__gambar{
+        height: 23rem;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        &--1{
+            background:linear-gradient(rgba(255, 185, 0, 0.68), rgba(255, 119, 48, 0.68)), url('../img/nat-5.jpg') no-repeat top /cover;
+        }
+        &--2{
+            background: url('../img/nat-6.jpg') no-repeat top /cover;
+        }
+        &--3{
+            background: url('../img/nat-7.jpg') no-repeat top /cover;
+        }
+        @supports (background-blend-mode: screen){
+            background-blend-mode: screen;
+            &--1{
+                background: linear-gradient(to right bottom, $warna-orange-muda, $warna-orange-tua),url('../img/nat-5.jpg') no-repeat top /cover;
+            }
+            &--2{
+                background: linear-gradient(to right bottom, $warna-hijau-muda, $warna-hijau-tua),url('../img/nat-6.jpg') no-repeat top /cover;
+            }
+            &--3{
+                background: linear-gradient(to right bottom, $warna-biru-muda, $warna-biru-tua),url('../img/nat-7.jpg') no-repeat top /cover;
+            }
+        }
+        
+    }
+    &__heading {
+        font-size: 2.5rem;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        text-align: right;
+        text-transform: uppercase;
+        color: $warna-putih;
+        font-weight: 300;
+        width: 65%;
+        &--span{
+            padding: 1rem 2rem;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+            &--1{
+                background: linear-gradient(to right bottom, rgba($warna-orange-muda,.8), rgba($warna-orange-tua,.8));
+            }
+            &--2{
+                background: linear-gradient(to right bottom, rgba($warna-hijau-muda,.8), rgba($warna-hijau-tua,.8));
+            }
+            &--3{
+                background: linear-gradient(to right bottom, rgba($warna-biru-muda,.8), rgba($warna-biru-tua,.8));
+            }
+        }
+    }
+    &__table{
+        width: 80%;
+        margin: 0 auto;
+        padding: 3rem;
+        ul{
+            list-style: none;
+            font-size: 1.5rem;
+            li{
+                text-align: center;
+                padding: 1rem;
+                &:not(:last-child){
+                    border-bottom: 2px solid #e7e7e7;
+                }
+                
+            }
+        }
+    }
+
+    // PENGATURAN UNTUK BAGIAN BELAKANG
+    &__harga{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        width: 90%;
+        &--judul{
+            font-size: 2.5rem;
+            color:$warna-putih;
+            font-weight: 100;
+            text-transform: uppercase;
+        }   
+        &--nilai{
+            font-size: 6rem;
+            font-weight: 100;
+            color: $warna-putih;
+            text-transform:uppercase;
+        }
+    }
+
+    // Media Untuk Tablet Portait
+    @include responsive(tablet-portait){
+        height: auto;
+        background: #fff;
+        box-shadow: 0 1rem 4rem rgba($warna-hitam, .2);
+        &__sisi {    
+            height: auto;
+            position: relative;
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: none;
+            &--belakang{
+                transform: rotateY(0deg);
+                -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%) !important;
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%) !important;
+            }
+            &--depan{
+                transform: rotateY(0);
+            }
+        }
+            
+        // PENGATURAN UNTUK BAGIAN BELAKANG
+        &__harga{
+            position: relative;
+            padding: 4rem;
+            left:0%;
+            top: 0%;
+            transform: translate(0);
+            text-align: center;
+            width: 100%;
+           
+            &--judul{
+                font-size: 1.4rem;
+            }   
+            &--nilai{
+                font-size: 4rem;
+            }
+        }
+
+    }
+
+
+
+
+
+}

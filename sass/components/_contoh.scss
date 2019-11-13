@@ -1,0 +1,19 @@
+.section-contoh{
+    padding: 15rem 0;
+    background: #eeeeee;
+}
+.kotak-contoh{
+    background: lightgoldenrodyellow;
+    padding: 6rem 3rem;
+    box-shadow: 0 3rem 6rem rgba($warna-hitam, .2);
+    border-radius: 5px;
+}
+.header__ketiga:hover + .header__kedua{
+    background: green;
+    color: $warna-putih;
+}
+
+
+
+
+

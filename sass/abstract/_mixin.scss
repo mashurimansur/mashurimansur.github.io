@@ -1,0 +1,39 @@
+@mixin clearfix {
+        &::after{
+            content: " ";
+            display: table;
+            clear: both;
+        }
+}
+
+// Media Query
+/*
+
+Phone =              <= 600px
+Tablet Portait =     <= 900px
+Tablet Landscape =   <= 1200px
+Dektop =              =1200px - 1800px;
+Big Dektop =          >1800px;
+
+*/
+
+@mixin responsive($perangkat){
+    // Untuk Perangkat Phone
+    @if $perangkat == phone {
+        @media (max-width:600px){
+            @content;
+        }
+    }
+    // Untuk Perangkat Tablet Portait
+    @if $perangkat == tablet-portait {
+        @media (max-width:900px){
+            @content;
+        }
+    }
+    // Untuk Perangkat Tablet Landscape
+    @if $perangkat == tablet-landscape {
+        @media (max-width:1200px){
+            @content;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.text-center {
+    text-align: center !important;
+}
+.m-btm-lg{
+    margin-bottom: 8rem !important;
+    @include responsive(tablet-portait){
+        margin-bottom:4rem !important;
+    }
+}
+.m-btm-md{
+    margin-bottom: 4rem !important;
+    @include responsive(tablet-portait){
+        margin-bottom: 3rem !important;
+    }
+}
+.m-btm-sm{
+    margin-bottom: 2rem !important;
+}
