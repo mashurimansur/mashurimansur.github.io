@@ -15,21 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script>
-      (function () {
-        try {
-          var storedTheme = localStorage.getItem("theme");
-          if (storedTheme) {
-            document.documentElement.setAttribute("data-theme", storedTheme);
-            return;
-          }
-        } catch (err) {
-          /* no-op */
-        }
-        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
-      })();
-    </script>
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="noise"></div>
@@ -101,7 +87,7 @@
               </li>
               <li>
                 <a
-                  href="mailto:mashuri.mansur@gmail.com"
+                  href="mailto:mashurimansur18@gmail.com"
                   target="_blank"
                   rel="noreferrer"
                   >Email</a
@@ -165,8 +151,8 @@
           </div>
           <div class="timeline">
             <article class="timeline__item">
-              <span class="timeline__period">2022 — Present</span>
-              <h3>Lead Backend Engineer · Tech Forward</h3>
+              <span class="timeline__period">2021 — Present</span>
+              <h3>Backend Developer · PT Phincon</h3>
               <p>
                 Led the platform team in designing microservices architecture for
                 a regional SaaS platform, aligned API contracts across squads, and
@@ -300,7 +286,7 @@
         <section class="cta">
           <div class="cta__inner">
             <p>Need a partner for your next backend project?</p>
-            <a class="button button--primary" href="mailto:mashuri.mansur@gmail.com"
+            <a class="button button--primary" href="mailto:mashurimansur18@gmail.com"
               >Send Email</a
             >
           </div>
@@ -329,9 +315,9 @@
             <div>
               <p class="contact-card__title">Reach me directly</p>
               <a
-                href="mailto:mashuri.mansur@gmail.com"
+                href="mailto:mashurimansur18@gmail.com"
                 class="contact-card__link"
-                >mashuri.mansur@gmail.com</a
+                >mashurimansur18@gmail.com</a
               >
             </div>
             <div>
@@ -372,76 +358,5 @@
       </footer>
     </div>
 
-    <script>
-      (function () {
-        var root = document.documentElement;
-        var toggle = document.getElementById("theme-toggle");
-        var toggleText = document.getElementById("theme-toggle-text");
-        var storageKey = "theme";
-
-        function updateToggleLabel(theme) {
-          if (!toggle || !toggleText) {
-            return;
-          }
-          var next = theme === "dark" ? "Light" : "Dark";
-          toggle.setAttribute("aria-label", "Switch to " + next.toLowerCase() + " theme");
-          toggleText.textContent = next + " mode";
-        }
-
-        function setTheme(theme, persist) {
-          root.setAttribute("data-theme", theme);
-          if (persist) {
-            try {
-              localStorage.setItem(storageKey, theme);
-            } catch (err) {
-              /* no-op */
-            }
-          }
-          updateToggleLabel(theme);
-        }
-
-        var storedTheme = null;
-        try {
-          storedTheme = localStorage.getItem(storageKey);
-        } catch (err) {
-          storedTheme = null;
-        }
-
-        var initialTheme = storedTheme || root.getAttribute("data-theme") || "dark";
-        setTheme(initialTheme, false);
-
-        if (toggle) {
-          toggle.addEventListener("click", function () {
-            var current = root.getAttribute("data-theme") === "light" ? "light" : "dark";
-            var next = current === "dark" ? "light" : "dark";
-            setTheme(next, true);
-          });
-        }
-
-        var mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-        function handleSystemChange(event) {
-          var hasStored = false;
-          try {
-            hasStored = Boolean(localStorage.getItem(storageKey));
-          } catch (err) {
-            hasStored = false;
-          }
-          if (!hasStored) {
-            setTheme(event.matches ? "dark" : "light", false);
-          }
-        }
-
-        if (mediaQuery.addEventListener) {
-          mediaQuery.addEventListener("change", handleSystemChange);
-        } else if (mediaQuery.addListener) {
-          mediaQuery.addListener(handleSystemChange);
-        }
-
-        var yearEl = document.getElementById("year");
-        if (yearEl) {
-          yearEl.textContent = new Date().getFullYear();
-        }
-      })();
-    </script>
   </body>
 </html>
