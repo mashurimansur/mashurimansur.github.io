@@ -15,13 +15,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="/img/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="my.jpg" />
     <script src="script.js"></script>
   </head>
   <body>
     <div class="noise"></div>
     <div class="page-shell">
       <header class="topbar">
-        <a href="#home" class="brand">MM</a>
+        <a href="#home" class="brand" aria-label="Back to top">
+          <img src="/img/android-chrome-192x192.png" alt="Mashuri Mansur" class="brand__photo" />
+        </a>
         <div class="topbar__right">
           <nav class="nav">
             <a href="#about">About</a>
@@ -98,10 +102,15 @@
           <div class="hero__card">
             <div class="hero__avatar">
               <div class="hero__glow"></div>
-              <span class="hero__initials">MM</span>
+              <img
+                src="/img/android-chrome-512x512.png"
+                alt="Portrait of Mashuri Mansur"
+                class="hero__photo"
+                loading="lazy"
+              />
             </div>
             <div class="hero__meta">
-              <p><strong>Experience:</strong> 6+ years</p>
+              <p><strong>Experience:</strong> 4+ years</p>
               <p><strong>Focus:</strong> Backend Engineering, API Design, Cloud</p>
               <p><strong>Stack:</strong> Node.js, Go, PostgreSQL, AWS</p>
             </div>
