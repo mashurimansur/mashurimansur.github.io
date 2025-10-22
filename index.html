@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,18 +15,46 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        try {
+          var storedTheme = localStorage.getItem("theme");
+          if (storedTheme) {
+            document.documentElement.setAttribute("data-theme", storedTheme);
+            return;
+          }
+        } catch (err) {
+          /* no-op */
+        }
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+      })();
+    </script>
   </head>
   <body>
     <div class="noise"></div>
     <div class="page-shell">
       <header class="topbar">
         <a href="#home" class="brand">MM</a>
-        <nav class="nav">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
+        <div class="topbar__right">
+          <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Switch to light theme"
+          >
+            <span class="theme-toggle__track" aria-hidden="true">
+              <span class="theme-toggle__thumb"></span>
+            </span>
+            <span class="theme-toggle__text" id="theme-toggle-text">Light mode</span>
+          </button>
+        </div>
       </header>
 
       <main>
@@ -345,7 +373,75 @@
     </div>
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+      (function () {
+        var root = document.documentElement;
+        var toggle = document.getElementById("theme-toggle");
+        var toggleText = document.getElementById("theme-toggle-text");
+        var storageKey = "theme";
+
+        function updateToggleLabel(theme) {
+          if (!toggle || !toggleText) {
+            return;
+          }
+          var next = theme === "dark" ? "Light" : "Dark";
+          toggle.setAttribute("aria-label", "Switch to " + next.toLowerCase() + " theme");
+          toggleText.textContent = next + " mode";
+        }
+
+        function setTheme(theme, persist) {
+          root.setAttribute("data-theme", theme);
+          if (persist) {
+            try {
+              localStorage.setItem(storageKey, theme);
+            } catch (err) {
+              /* no-op */
+            }
+          }
+          updateToggleLabel(theme);
+        }
+
+        var storedTheme = null;
+        try {
+          storedTheme = localStorage.getItem(storageKey);
+        } catch (err) {
+          storedTheme = null;
+        }
+
+        var initialTheme = storedTheme || root.getAttribute("data-theme") || "dark";
+        setTheme(initialTheme, false);
+
+        if (toggle) {
+          toggle.addEventListener("click", function () {
+            var current = root.getAttribute("data-theme") === "light" ? "light" : "dark";
+            var next = current === "dark" ? "light" : "dark";
+            setTheme(next, true);
+          });
+        }
+
+        var mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        function handleSystemChange(event) {
+          var hasStored = false;
+          try {
+            hasStored = Boolean(localStorage.getItem(storageKey));
+          } catch (err) {
+            hasStored = false;
+          }
+          if (!hasStored) {
+            setTheme(event.matches ? "dark" : "light", false);
+          }
+        }
+
+        if (mediaQuery.addEventListener) {
+          mediaQuery.addEventListener("change", handleSystemChange);
+        } else if (mediaQuery.addListener) {
+          mediaQuery.addListener(handleSystemChange);
+        }
+
+        var yearEl = document.getElementById("year");
+        if (yearEl) {
+          yearEl.textContent = new Date().getFullYear();
+        }
+      })();
     </script>
   </body>
 </html>
