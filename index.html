@@ -1,231 +1,204 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Professional profile of Mashuri Mansur, a Backend Engineer."
-    />
-    <title>Mashuri Mansur | Backend Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="/img/favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="my.jpg" />
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div class="noise"></div>
-    <div class="page-shell">
-      <header class="topbar">
-        <a href="#home" class="brand" aria-label="Back to top">
-          <img src="/img/android-chrome-192x192.png" alt="Mashuri Mansur" class="brand__photo" />
-        </a>
-        <div class="topbar__right">
-          <nav class="nav">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-          </nav>
-          <button
-            class="theme-toggle"
-            id="theme-toggle"
-            type="button"
-            aria-label="Switch to light theme"
-          >
-            <span class="theme-toggle__track" aria-hidden="true">
-              <span class="theme-toggle__thumb"></span>
-            </span>
-            <span class="theme-toggle__text" id="theme-toggle-text">Light mode</span>
-          </button>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Professional profile of Mashuri Mansur, a Backend Engineer." />
+  <title>Mashuri Mansur | Backend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="/img/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="my.jpg" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="noise"></div>
+  <div class="page-shell">
+    <header class="topbar">
+      <a href="#home" class="brand" aria-label="Back to top">
+        <img src="/img/android-chrome-192x192.png" alt="Mashuri Mansur" class="brand__photo" />
+      </a>
+      <div class="topbar__right">
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme">
+          <span class="theme-toggle__track" aria-hidden="true">
+            <span class="theme-toggle__thumb"></span>
+          </span>
+          <span class="theme-toggle__text" id="theme-toggle-text">Light mode</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero__text">
+          <span class="hero__badge">Backend Developer · Indonesia</span>
+          <h1>
+            Hi, I'm <span class="accent">Mashuri Mansur</span>.<br />
+            I design resilient and scalable backend services.
+          </h1>
+          <p class="hero__description">
+            I focus on API architecture, microservices orchestration, and cloud
+            infrastructure automation. My code prioritizes observability,
+            security, and performance to keep products growing smoothly.
+          </p>
+          <div class="hero__cta">
+            <!-- <a class="button button--primary" href="#projects">View Backend Projects</a> -->
+            <a class="button button--primary" href="Mashuri-Mansur-CV.pdf">Download CV</a>
+            <a class="button button--ghost" href="https://www.linkedin.com/in/mashuri-m-66ab79a7/" target="_blank"
+              rel="noreferrer">LinkedIn Profile</a>
+          </div>
+          <ul class="social">
+            <li>
+              <a href="https://www.linkedin.com/in/mashuri-m-66ab79a7/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://github.com/mashurimansur" target="_blank" rel="noreferrer">GitHub</a>
+            </li>
+            <li>
+              <a href="mailto:mashurimansur18@gmail.com" target="_blank" rel="noreferrer">Email</a>
+            </li>
+          </ul>
         </div>
-      </header>
+        <div class="hero__card">
+          <div class="hero__avatar">
+            <div class="hero__glow"></div>
+            <img src="/img/android-chrome-512x512.png" alt="Portrait of Mashuri Mansur" class="hero__photo"
+              loading="lazy" />
+          </div>
+          <div class="hero__meta">
+            <p><strong>Experience:</strong> 4+ years</p>
+            <p><strong>Focus:</strong> Backend Development, API Design, Microservices</p>
+            <p><strong>Stack:</strong> Node.js, Go, PostgreSQL, Redis, Gin, Fiber</p>
+          </div>
+        </div>
+      </section>
 
-      <main>
-        <section id="home" class="hero">
-          <div class="hero__text">
-            <span class="hero__badge">Backend Engineer · Indonesia</span>
-            <h1>
-              Hi, I'm <span class="accent">Mashuri Mansur</span>.<br />
-              I design resilient and scalable backend services.
-            </h1>
-            <p class="hero__description">
-              I focus on API architecture, microservices orchestration, and cloud
-              infrastructure automation. My code prioritizes observability,
-              security, and performance to keep products growing smoothly.
-            </p>
-            <div class="hero__cta">
-              <a class="button button--primary" href="#projects"
-                >View Backend Projects</a
-              >
-              <a
-                class="button button--ghost"
-                href="https://www.linkedin.com/in/mashuri-m-66ab79a7/"
-                target="_blank"
-                rel="noreferrer"
-                >LinkedIn Profile</a
-              >
-            </div>
-            <ul class="social">
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/mashuri-m-66ab79a7/"
-                  target="_blank"
-                  rel="noreferrer"
-                  >LinkedIn</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://github.com/mashurimansur"
-                  target="_blank"
-                  rel="noreferrer"
-                  >GitHub</a
-                >
-              </li>
-              <li>
-                <a
-                  href="mailto:mashurimansur18@gmail.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  >Email</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="hero__card">
-            <div class="hero__avatar">
-              <div class="hero__glow"></div>
-              <img
-                src="/img/android-chrome-512x512.png"
-                alt="Portrait of Mashuri Mansur"
-                class="hero__photo"
-                loading="lazy"
-              />
-            </div>
-            <div class="hero__meta">
-              <p><strong>Experience:</strong> 4+ years</p>
-              <p><strong>Focus:</strong> Backend Engineering, API Design, Cloud</p>
-              <p><strong>Stack:</strong> Node.js, Go, PostgreSQL, AWS</p>
-            </div>
-          </div>
-        </section>
+      <section id="about" class="section">
+        <div class="section__heading">
+          <span class="section__kicker">About</span>
+          <h2>Orchestrating dependable backend services</h2>
+        </div>
+        <div class="section__content">
+          <p>
+            I'm a Backend Engineer passionate about structuring system
+            architecture, data, and automation. I believe a strong backend
+            foundation is key to seamless user experiences while giving product
+            teams room to scale.
+          </p>
+          <p>
+            I work extensively with <strong>Node.js</strong>, <strong>Go</strong>,
+            <strong>PostgreSQL</strong>, and
+            <strong>MySQL</strong>. I shape API designs, observability pipelines,
+            and optimize infrastructure costs through automation and DevOps
+            practices.
+          </p>
+          <ul class="tags">
+            <li>Node.js</li>
+            <li>Go</li>
+            <li>PostgreSQL</li>
+            <li>MySQL</li>
+            <li>Redis</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+      </section>
 
-        <section id="about" class="section">
-          <div class="section__heading">
-            <span class="section__kicker">About</span>
-            <h2>Orchestrating dependable backend services</h2>
-          </div>
-          <div class="section__content">
+      <section id="experience" class="section section--split">
+        <div class="section__heading">
+          <span class="section__kicker">Experience</span>
+          <h2>Professional journey</h2>
+          <p>
+            Guiding products from idea to production with backends that scale,
+            are observable, and keep users secure.
+          </p>
+        </div>
+        <div class="timeline">
+          <article class="timeline__item">
+            <span class="timeline__period">2021 — Present</span>
+            <h3>Backend Developer · PT Phincon</h3>
             <p>
-              I'm a Backend Engineer passionate about structuring system
-              architecture, data, and automation. I believe a strong backend
-              foundation is key to seamless user experiences while giving product
-              teams room to scale.
+              Responsible for migrating backend services from a monolithic architecture to microservices, designing and
+              developing new APIs, and maintaining service stability across multiple environments.
+              Provided technical support for ConfigMap updates, pre-production deployments using Jenkins, and production
+              releases.
+              Collaborated closely with QA teams during SIT, UAT, RFS, and RFC phases to ensure smooth rollout and
+              system reliability.
+              Also maintained and updated API documentation to support cross-team integration and post-deployment
+              visibility.
             </p>
-            <p>
-              I work extensively with <strong>Node.js</strong>, <strong>Go</strong>,
-              <strong>TypeScript</strong>, <strong>PostgreSQL</strong>, and
-              <strong>AWS</strong>. I shape API designs, observability pipelines,
-              and optimize infrastructure costs through automation and DevOps
-              practices.
-            </p>
-            <ul class="tags">
+            <ul class="timeline__tags">
               <li>Node.js</li>
-              <li>TypeScript</li>
               <li>Go</li>
               <li>PostgreSQL</li>
               <li>Redis</li>
-              <li>Docker</li>
-              <li>Kubernetes</li>
-              <li>AWS</li>
+              <li>Microservices</li>
+              <li>Jenkins</li>
+              <li>CI/CD</li>
+              <li>Rest API</li>
+              <li>Performance Testing</li>
             </ul>
-          </div>
-        </section>
+          </article>
 
-        <section id="experience" class="section section--split">
-          <div class="section__heading">
-            <span class="section__kicker">Experience</span>
-            <h2>Professional journey</h2>
+          <article class="timeline__item">
+            <span class="timeline__period">2018 — 2019</span>
+            <h3>Backend Developer · PT Docotel Teknologi Celebes</h3>
             <p>
-              Guiding products from idea to production with backends that scale,
-              are observable, and keep users secure.
+              Developed and maintained backend systems for several government websites using PHP Laravel, including API
+              integration and feature implementation.
+              Provided support during testing phases and prepared detailed API documentation.
+              Additionally, contributed to the company’s internal product by developing RESTful APIs using Go (Golang),
+              building data crawling applications, and maintaining comprehensive API documentation to ensure smooth
+              collaboration between backend and frontend teams.
             </p>
-          </div>
-          <div class="timeline">
-            <article class="timeline__item">
-              <span class="timeline__period">2021 — Present</span>
-              <h3>Backend Developer · PT Phincon</h3>
-              <p>
-                Responsible for migrating backend services from a monolithic architecture to microservices, designing and developing new APIs, and maintaining service stability across multiple environments.
-                Provided technical support for ConfigMap updates, pre-production deployments using Jenkins, and production releases.
-                Collaborated closely with QA teams during SIT, UAT, RFS, and RFC phases to ensure smooth rollout and system reliability.
-                Also maintained and updated API documentation to support cross-team integration and post-deployment visibility.
-              </p>
-              <ul class="timeline__tags">
-                <li>Node.js</li>
-                <li>Go</li>
-                <li>PostgreSQL</li>
-                <li>Redis</li>
-                <li>Microservices</li>
-                <li>Jenkins</li> 
-                <li>CI/CD</li>
-                <li>Rest API</li>
-                <li>Performance Testing</li> 
-              </ul>
-            </article>
+            <ul class="timeline__tags">
+              <li>Go</li>
+              <li>PHP Laravel</li>
+              <li>PostgreSQL</li>
+              <li>MongoDB</li>
+              <li>Crawling</li>
+              <li>Postman</li>
+            </ul>
+          </article>
 
-            <article class="timeline__item">
-              <span class="timeline__period">2018 — 2019</span>
-              <h3>Backend Developer · PT Docotel Teknologi Celebes</h3>
-              <p>
-                Developed and maintained backend systems for several government websites using PHP Laravel, including API integration and feature implementation.
-                Provided support during testing phases and prepared detailed API documentation.
-                Additionally, contributed to the company’s internal product by developing RESTful APIs using Go (Golang), building data crawling applications, and maintaining comprehensive API documentation to ensure smooth collaboration between backend and frontend teams.
-              </p>
-              <ul class="timeline__tags">
-                <li>Go</li>
-                <li>PHP Laravel</li>
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-                <li>Crawling</li>
-                <li>Postman</li>
-              </ul>
-            </article>
-
-            <article class="timeline__item">
-              <span class="timeline__period">2016 — 2018</span>
-              <h3>Backend Developer Intern · CV Media Sakti</h3>
-              <p>
-                Assisted in developing several profile websites for individuals and government institutions using PHP Laravel.
-                Responsible for building admin panels, integrating front-end templates, and deploying completed projects to CPanel servers to make them live.
-              </p>
-              <ul class="timeline__tags">
-                <li>PHP Laravel</li>
-                <li>MySQL</li>
-                <li>CPanel</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section id="projects" class="section">
-          <div class="section__heading">
-            <span class="section__kicker">Projects</span>
-            <h2>Recent work</h2>
+          <article class="timeline__item">
+            <span class="timeline__period">2016 — 2018</span>
+            <h3>Backend Developer Intern · CV Media Sakti</h3>
             <p>
-              A selection of projects showcasing my capability in system design and
-              modern backend implementation.
+              Assisted in developing several profile websites for individuals and government institutions using PHP
+              Laravel.
+              Responsible for building admin panels, integrating front-end templates, and deploying completed projects
+              to CPanel servers to make them live.
             </p>
-          </div>
-          <div class="projects">
-            <!-- <article class="project-card">
+            <ul class="timeline__tags">
+              <li>PHP Laravel</li>
+              <li>MySQL</li>
+              <li>CPanel</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section__heading">
+          <span class="section__kicker">Projects</span>
+          <h2>Recent work</h2>
+          <p>
+            A selection of projects showcasing my capability in system design and
+            modern backend implementation.
+          </p>
+        </div>
+        <div class="projects">
+          <!-- <article class="project-card">
               <div class="project-card__meta">
                 <span class="project-card__year">2024</span>
                 <span class="project-card__type">Product</span>
@@ -250,7 +223,7 @@
               >
             </article> -->
 
-            <!-- <article class="project-card">
+          <!-- <article class="project-card">
               <div class="project-card__meta">
                 <span class="project-card__year">2023</span>
                 <span class="project-card__type">Open Source</span>
@@ -274,7 +247,7 @@
               >
             </article> -->
 
-            <!-- <article class="project-card">
+          <!-- <article class="project-card">
               <div class="project-card__meta">
                 <span class="project-card__year">2022</span>
                 <span class="project-card__type">Experiment</span>
@@ -297,83 +270,58 @@
                 >View repository</a
               >
             </article> -->
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="cta">
-          <div class="cta__inner">
-            <p>Need a partner for your next backend project?</p>
-            <a class="button button--primary" href="mailto:mashurimansur18@gmail.com"
-              >Send Email</a
-            >
-          </div>
-        </section>
+      <section class="cta">
+        <div class="cta__inner">
+          <p>Need a partner for your next backend project?</p>
+          <a class="button button--primary" href="mailto:mashurimansur18@gmail.com">Send Email</a>
+        </div>
+      </section>
 
-        <section id="contact" class="section section--split">
-          <div class="section__heading">
-            <span class="section__kicker">Contact</span>
-            <h2>Let's build something together</h2>
-            <p>
-              I'm open to collaboration, mentoring, or deep dives into backend
-              architecture. Share your challenge and let's find a solution.
-            </p>
+      <section id="contact" class="section section--split">
+        <div class="section__heading">
+          <span class="section__kicker">Contact</span>
+          <h2>Let's build something together</h2>
+          <p>
+            I'm open to collaboration, mentoring, or deep dives into backend
+            architecture. Share your challenge and let's find a solution.
+          </p>
+        </div>
+        <div class="contact-card">
+          <div>
+            <p class="contact-card__title">Portfolio &amp; Career</p>
+            <a href="https://www.linkedin.com/in/mashuri-m-66ab79a7/" target="_blank" rel="noreferrer"
+              class="contact-card__link">LinkedIn</a>
           </div>
-          <div class="contact-card">
-            <div>
-              <p class="contact-card__title">Portfolio &amp; Career</p>
-              <a
-                href="https://www.linkedin.com/in/mashuri-m-66ab79a7/"
-                target="_blank"
-                rel="noreferrer"
-                class="contact-card__link"
-                >LinkedIn</a
-              >
-            </div>
-            <div>
-              <p class="contact-card__title">Reach me directly</p>
-              <a
-                href="mailto:mashurimansur18@gmail.com"
-                class="contact-card__link"
-                >mashurimansur18@gmail.com</a
-              >
-            </div>
-            <div>
-              <p class="contact-card__title">Social</p>
-              <ul class="contact-card__links">
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/mashuri-m-66ab79a7/"
-                    target="_blank"
-                    rel="noreferrer"
-                    >LinkedIn</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/mashurimansur"
-                    target="_blank"
-                    rel="noreferrer"
-                    >GitHub</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="mailto:mashuri.mansur@gmail.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    >Email</a
-                  >
-                </li>
-              </ul>
-            </div>
+          <div>
+            <p class="contact-card__title">Reach me directly</p>
+            <a href="mailto:mashurimansur18@gmail.com" class="contact-card__link">mashurimansur18@gmail.com</a>
           </div>
-        </section>
-      </main>
+          <div>
+            <p class="contact-card__title">Social</p>
+            <ul class="contact-card__links">
+              <li>
+                <a href="https://www.linkedin.com/in/mashuri-m-66ab79a7/" target="_blank" rel="noreferrer">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://github.com/mashurimansur" target="_blank" rel="noreferrer">GitHub</a>
+              </li>
+              <li>
+                <a href="mailto:mashuri.mansur@gmail.com" target="_blank" rel="noreferrer">Email</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
 
-      <footer class="footer">
-        <p>© <span id="year"></span> Mashuri Mansur. Built with love in Indonesia.</p>
-      </footer>
-    </div>
+    <footer class="footer">
+      <p>© <span id="year"></span> Mashuri Mansur. Built with love in Indonesia.</p>
+    </footer>
+  </div>
 
-  </body>
+</body>
+
 </html>
