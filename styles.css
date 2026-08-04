@@ -106,6 +106,7 @@ body {
 .topbar {
   position: sticky;
   top: 24px;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
