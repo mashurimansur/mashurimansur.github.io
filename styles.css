@@ -551,6 +551,15 @@ body {
   margin-bottom: 18px;
 }
 
+.project-card__type {
+  align-self: flex-start;
+  padding: 5px 10px;
+  border: 1px solid var(--chip-strong-border);
+  border-radius: 999px;
+  background: var(--chip-strong-bg);
+  color: var(--accent);
+}
+
 .project-card h3 {
   margin: 0 0 16px;
   font-size: 22px;
