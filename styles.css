@@ -542,7 +542,8 @@ body {
 
 .project-card__meta {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 6px;
   font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
